@@ -15,10 +15,10 @@
 
 This project implements a Gradient Boosting Classifier entirely from first principles, using custom-built decision tree regressors. 
 
-**What Does the Model Do? **
+**What Does the Model Do?**
 This implementation performs binary classification using the gradient boosting framework. Each iteration adds a regression tree trained on the residuals of the current predictions. The ensemble converges toward the true labels by minimizing log loss.
 
-**Features **
+**Features**
 - A handcrafted Regression Tree
 - Gradient boosting using residuals
 - Feature importance tracking
@@ -26,12 +26,12 @@ This implementation performs binary classification using the gradient boosting f
 - Custom metrics and data generation
 - Clean test cases with visualization
 
-**How to Run **
+**How to Run**
 
-**Run all test cases **
+**Run all test cases**
 ```python3 -m test_visual_classifier```
 
-**Run training script **
+**Run training script**
 ```
 python3 tree.py
 python3 metrics.py
