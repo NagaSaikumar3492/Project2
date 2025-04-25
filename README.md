@@ -32,11 +32,12 @@ This implementation performs binary classification using the gradient boosting f
 ```python3 -m test_visual_classifier```
 
 **Run training script: **
-```python3 tree.py
+```
+python3 tree.py
 python3 metrics.py
 python3 dataset.py
-python3 gradient_boosting.py```
-
+python3 gradient_boosting.py
+```
 
 
 [Before running the main file (gradient_boosting.py) we need to run - tree.py, metrics.py and dataset.py or else the program will throw error]
