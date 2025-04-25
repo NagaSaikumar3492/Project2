@@ -155,12 +155,16 @@ Known Limitations & Workarounds
 Limitations:
    
 a. Very noisy datasets 
+
 b. Unbalanced class distributions without stratification 
+
 c. Datasets where feature scaling dramatically affects splits
 
  Workaround:    
                                 
 a. Use stratify=y in train/test splits 
+
 b. Add early stopping based on validation accuracy 
+
 c. Include feature selection or feature importance scoring
 
