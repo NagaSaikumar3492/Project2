@@ -30,9 +30,8 @@ This implementation performs binary classification using the gradient boosting f
 
 **How to Run**
 
-change the directory
-
-to :- cd project_2/
+change the directory to :- 
+cd project_2/
 
 **Run all test cases**
 ```python3 -m test_visual_classifier```
