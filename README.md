@@ -29,13 +29,13 @@ This implementation performs binary classification using the gradient boosting f
 **How to Run:- **
 
 **Run all test cases: **
-python3 -m test_visual_classifier
+```python3 -m test_visual_classifier```
 
 **Run training script: **
-python3 tree.py
+```python3 tree.py
 python3 metrics.py
 python3 dataset.py
-python3 gradient_boosting.py
+python3 gradient_boosting.py```
 
 
 
@@ -100,7 +100,7 @@ GradientBoostingClassifier(
     X5, y5 = make_classification(1000, 10, informative=6, redundant=2, class_sep=1.0, random_state=42)
     run_case("High Dimensional", X5, y5)           
 
-**Usage Example:- **
+**Usage Example** 
     
 # Test demo
 if __name__ == "__main__":
