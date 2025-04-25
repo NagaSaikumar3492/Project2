@@ -15,7 +15,9 @@
 
 This project implements a Gradient Boosting Classifier entirely from first principles, using custom-built decision tree regressors. 
 
+
 **What Does the Model Do?**
+
 This implementation performs binary classification using the gradient boosting framework. Each iteration adds a regression tree trained on the residuals of the current predictions. The ensemble converges toward the true labels by minimizing log loss.
 
 **Features**
@@ -41,14 +43,19 @@ python3 gradient_boosting.py
 
 
 [Before running the main file (gradient_boosting.py) we need to run - tree.py, metrics.py and dataset.py or else the program will throw error]
+
 **Testing & Evaluation**
+
 **Tested On Datasets**
+
 - Clean Moons 
 - Noisy Moons 
 - Easy Classification 
 - Overlapping Classes 
-- High-Dimensional 
+- High-Dimensional
+  
 **Testing Approach**
+
 -	Visual evaluation using plots (decision boundaries, ROC curves, confusion matrices)
 -	Metric-based validation (accuracy, precision, recall, F1-score)
 -	Stratified train-test splitting to preserve class balance
@@ -58,6 +65,7 @@ python3 gradient_boosting.py
 -	Low- and high-dimensional feature spaces
 
 **Evaluation Metrics**
+
 - Accuracy 
 - Confusion matrix 
 - ROC AUC 
@@ -73,12 +81,14 @@ Accuracy is around 97%, showing high robustness on structured and lightly noisy 
  `max_depth`      - Tree depth, controls model complexity        
 
 **Tunable Parameters**
+
 GradientBoostingClassifier(
     n_estimators,
     learning_rate,
     max_depth,
     subsample
 )
+
 **Testing Example**
 
 1. **Clean moons**
@@ -104,6 +114,7 @@ GradientBoostingClassifier(
 **Usage Example** 
     
 # Test demo
+
 if __name__ == "__main__":
     from sklearn.datasets import make_classification
 
@@ -127,7 +138,6 @@ The model works best in scenarios such as the following:
 • When performance needs to be visualized with ROC curves, decision boundaries, and confusion matrices.
 The model performs best with moderate bias and medium-sized datasets, where additive learning is especially important, like: fraud detection, medical diagnosis, or spam filtering.
 
-
 **Q2. How did you test your model to determine if it is working reasonably correctly?**
 The model was challenged with a number of synthetic and structured datasets that mimic real-world classification problems, including but not limited to:
 • Low noise moons Cleanly separable data.
@@ -142,7 +152,6 @@ To assess each scenario’s model performance, we used:
 • Plots of decision boundaries (for 2D datasets).
 The model proved to achieve the overall accuracy upto 97% with well-structured datasets. Even in datasets subjected to moderate noise, the model maintained reliable performance.
 
-
 **Q3. What parameters have you exposed to users of your implementation in order to tune performance?**
 Users can tune the model using the following hyperparameters:
 Parameter	            Purpose
@@ -154,7 +163,6 @@ model = CustomGradientBoostingClassifier(n_estimators=300, learning_rate=0.05, m
 model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 These parameters offer flexibility to control both model capacity and generalization strength.
-
 
 **Q4. Are there specific inputs that your implementation has trouble with? Could you work around these?**
 Yes, like with most boosting models, our implementation can be challenged by:
